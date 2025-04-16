@@ -17,6 +17,8 @@
     "mariadb": "^3.4.1"
   },
   "devDependencies": {
-    "@types/express": "^5.0.1"
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9"
   }
 }
