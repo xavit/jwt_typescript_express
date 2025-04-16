@@ -48,9 +48,10 @@ export const loginUser = (req: Request, res: Response) => {
         return res.status(401).json({ error: "Contraseña incorrecta" });
       }
 
+      console.log("process.env.JWT_SECRET", process.env.JWT_SECRET);
       const token = jwt.sign(
         { id: user.id, nombre: user.nombre },
-        process.env.SECRET_KEY!
+        process.env.JWT_SECRET!
       );
 
       res.status(200).json({ msg: "Login exitoso", user, token });
